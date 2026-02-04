@@ -1,3 +1,4 @@
+
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?logo=python)
 ![Flask](https://img.shields.io/badge/Flask-Web_App-black?logo=flask)
 ![ML](https://img.shields.io/badge/Machine_Learning-Random_Forest-green)
@@ -5,52 +6,66 @@
 ![License](https://img.shields.io/badge/License-MIT-yellow)
 ![Status](https://img.shields.io/badge/Status-Active-success)
 
-Ransomware Web Detector
+# Ransomware Web Detector
 
-A Flask-based web application to detect ransomware using Machine Learning and VirusTotal analysis.
+A Flask-based web application to detect ransomware using **Machine Learning** and **VirusTotal analysis**.
 
-Features
+---
 
-File upload via web UI
+## Features
+- File upload via web UI  
+- VirusTotal hash-based scanning  
+- ML-based ransomware detection (Random Forest)  
+- Async file scanning  
+- Clean result report (hash, detections, verdict)
 
-VirusTotal hash-based scanning
+---
 
-ML-based ransomware detection (Random Forest)
+## Setup (Arch / Linux)
 
-Async file scanning
-
-Clean result report (hash, detections, verdict)
-
-Setup (Arch / Linux)
+```bash
 python -m venv venv
 source venv/bin/activate
 pip install -r requirements.txt
+````
 
-Run the App
+---
+
+## Run the App
+
+```bash
 python app.py
+```
 
+---
 
-Train ML Model
+## Train ML Model
+
+```bash
 python model.py
+```
 
-Tech Stack
+---
 
-Python
+## Tech Stack
 
-Flask
+* Python
+* Flask
+* Scikit-learn
+* Random Forest
+* VirusTotal API
 
-Scikit-learn
+---
 
-Random Forest
+## Notes
 
-VirusTotal API
+* Configure VirusTotal API in `assets/VTIsMalicious.py`
+* ML result returns **True / False** for ransomware
 
-Notes
+---
 
-Configure VirusTotal API in assets/VTIsMalicious.py
+## Author
 
-ML result returns True / False for ransomware
+**Roshan Kumar**
 
-Author
 
-Roshan Kumar
