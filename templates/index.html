@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scanly</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smooch+Sans:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <!-- Background Video -->
+    <video autoplay muted loop id="background-video">
+        <source src="/static/background.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Overlay Div -->
+    <div id="background-overlay"></div>
+
+    <header class="header">
+        <h2>Scanly</h2>
+        <p>AI BASED RANSOMWARE SCANNER</p>
+        <div class="divider"></div>
+    </header>
+    <main>
+        <div class="container">
+            <h1>Scan Your File</h1>
+            <form id="uploadForm" class="upload-form" enctype="multipart/form-data" action="/upload" method="POST">
+                <label for="file" class="file-label">Choose File to Scan</label>
+                <input type="file" id="file" name="file" required>
+                <button type="submit">Upload and Scan</button>
+            </form>
+            <div id="result" class="result-box"></div>
+        </div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2025 RBack Project. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('file').addEventListener('change', (e) => {
+            const fileName = e.target.files[0]?.name || "No file chosen";
+            document.querySelector('.file-label').innerText = `Selected File: ${fileName}`;
+        });
+        
+    </script>
+</body>
+</html>
