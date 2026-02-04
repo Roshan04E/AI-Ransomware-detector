@@ -57,6 +57,9 @@ python model.py
 
 ---
 
+<img width="1488" height="770" alt="image" src="https://github.com/user-attachments/assets/e36027cf-459f-43fe-a9e5-33d28f42a58a" />
+
+
 ## Notes
 
 * Configure VirusTotal API in `assets/VTIsMalicious.py`
